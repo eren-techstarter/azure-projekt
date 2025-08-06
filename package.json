@@ -1,0 +1,25 @@
+{
+  "name": "azure-projekt",
+  "version": "1.0.0",
+  "description": "Viele Lektionen, die Sie in größeren Unternehmen lernen, gelten nicht direkt für den ersten Stapel eines Startups. In der ersten Erkundungsphase eines Produkts müssen Sie die Bereitstellung für Geschwindigkeit, Kosten und Optionalität optimieren. Optionalität bezieht sich darauf, wie schnell Sie Richtungen innerhalb einer bestimmten Architektur ändern können.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eren-techstarter/azure-projekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eren-techstarter/azure-projekt/issues"
+  },
+  "homepage": "https://github.com/eren-techstarter/azure-projekt#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
