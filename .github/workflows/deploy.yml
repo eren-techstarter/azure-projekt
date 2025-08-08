@@ -6,7 +6,8 @@ on:
 
 env:
   ACR_LOGIN_SERVER: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-  WEBAPP_NAME: myexpressbackendapperen2   # Azure Web App name
+  WEBAPP_NAME: romanapp   # Azure Web App name
+
 
 jobs:
   build:
@@ -27,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/myexpressbackendapperen2:${{ github.sha }}
+          tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/romanapp:${{ github.sha }}
           file: ./Dockerfile
 
   deploy:
@@ -39,5 +40,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.WEBAPP_NAME }}
-          images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/myexpressbackendapperen2:${{ github.sha }}
+          images: ${{ secrets.REGISTRY_LOGIN_SERVER }}/romanapp:${{ github.sha }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
